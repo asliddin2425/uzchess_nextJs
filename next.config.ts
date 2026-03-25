@@ -8,8 +8,10 @@ const nextConfig: NextConfig = {
         hostname: "localhost",
         port: "3000",
         pathname: "/uploads/**",
-      }
-    ]
-  }
+      },
+    ],
+    unoptimized: true,
+  },
 };
+
 export default nextConfig;

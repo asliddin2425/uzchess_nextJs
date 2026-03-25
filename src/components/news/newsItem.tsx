@@ -7,11 +7,11 @@ interface Props {
 }
 export default function NewsItem({news}: Props) {
     return (
-        <article className="w-81.5 h-62.75 rounded-lg bg-(--dark) p-3 ">
+        <article className="w-81.5 h-62.75 rounded-lg bg-(--dark) p-3 caret-amber-300">
             <Image src={news.image} alt={news.title} width={302} height={113}/>
-            {/* <p>{news.date}</p> */}
+            <p>{news.date}</p>
             <h3>{news.title}</h3>
-            <h4>{news.content}</h4>
+            <h3>{news.content}</h3>
         </article>
     )
 }
