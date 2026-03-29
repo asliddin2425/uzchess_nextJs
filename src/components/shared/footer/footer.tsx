@@ -1,7 +1,9 @@
-export default function Footer() {
-    return(
-        <footer className="footer">
-            <h1>Footer</h1>
-        </footer>
-    )
-}
+import {FooterItem} from "../footer/footerItem";
+
+export const Footer = () => {
+  return (
+    <footer className={"flex flex-col w-screen min-w-full"}>
+      <FooterItem/>
+    </footer>
+  );
+};
