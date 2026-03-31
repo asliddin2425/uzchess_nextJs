@@ -13,8 +13,11 @@ import { LexicalErrorBoundary } from "@lexical/react/LexicalErrorBoundary";
 import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
 import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
+import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 
 export default function Editor() {
+
+
   return (
     <LexicalComposer initialConfig={editorConfig}>
       <ToolbarPlugin />
@@ -29,6 +32,7 @@ export default function Editor() {
       <ListPlugin/>
       <LinkPlugin/>
       <AutoFocusPlugin/>
+
     </LexicalComposer>
   );
 }

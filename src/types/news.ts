@@ -5,3 +5,4 @@ export interface News {
     content: string;
     date: string;
 }
+
