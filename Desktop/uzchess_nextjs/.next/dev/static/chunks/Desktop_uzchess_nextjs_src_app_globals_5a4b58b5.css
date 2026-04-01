@@ -31,8 +31,14 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-red-500: #fb2c36;
     --color-white: #fff;
     --spacing: .25rem;
+    --text-xs: .75rem;
+    --text-xs--line-height: calc(1 / .75);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-sm: .25rem;
@@ -44,6 +50,12 @@
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+  }
+
+  @supports (color: lab(0% 0 0)) {
+    :root, :host {
+      --color-red-500: lab(55.4814% 75.0732 48.8528);
+    }
   }
 }
 
@@ -324,6 +336,10 @@
     left: calc(var(--spacing) * 0);
   }
 
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
+
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
   }
@@ -344,8 +360,32 @@
     margin-top: calc(var(--spacing) * 5);
   }
 
+  .mt-6\.5 {
+    margin-top: calc(var(--spacing) * 6.5);
+  }
+
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
+  }
+
+  .mt-14\.5 {
+    margin-top: calc(var(--spacing) * 14.5);
+  }
+
+  .mt-18\.75 {
+    margin-top: calc(var(--spacing) * 18.75);
+  }
+
+  .mt-27\.25 {
+    margin-top: calc(var(--spacing) * 27.25);
+  }
+
+  .mt-39\.25 {
+    margin-top: calc(var(--spacing) * 39.25);
+  }
+
+  .mr-3 {
+    margin-right: calc(var(--spacing) * 3);
   }
 
   .mr-5 {
@@ -356,12 +396,32 @@
     margin-left: calc(var(--spacing) * -10);
   }
 
+  .-ml-20 {
+    margin-left: calc(var(--spacing) * -20);
+  }
+
+  .-ml-23 {
+    margin-left: calc(var(--spacing) * -23);
+  }
+
   .-ml-50 {
     margin-left: calc(var(--spacing) * -50);
   }
 
+  .-ml-88 {
+    margin-left: calc(var(--spacing) * -88);
+  }
+
+  .-ml-95 {
+    margin-left: calc(var(--spacing) * -95);
+  }
+
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
+  }
+
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
   }
 
   .ml-4 {
@@ -405,6 +465,10 @@
 
   .h-8 {
     height: calc(var(--spacing) * 8);
+  }
+
+  .h-10 {
+    height: calc(var(--spacing) * 10);
   }
 
   .h-11 {
@@ -455,6 +519,10 @@
     width: calc(var(--spacing) * 28);
   }
 
+  .w-49\.5 {
+    width: calc(var(--spacing) * 49.5);
+  }
+
   .w-64\.25 {
     width: calc(var(--spacing) * 64.25);
   }
@@ -465,6 +533,10 @@
 
   .w-81\.5 {
     width: calc(var(--spacing) * 81.5);
+  }
+
+  .w-86\.5 {
+    width: calc(var(--spacing) * 86.5);
   }
 
   .w-169 {
@@ -481,6 +553,10 @@
 
   .w-full {
     width: 100%;
+  }
+
+  .w-max {
+    width: max-content;
   }
 
   .w-px {
@@ -621,6 +697,14 @@
     background-color: #1a1d1f;
   }
 
+  .bg-\[\#1C92E0\] {
+    background-color: #1c92e0;
+  }
+
+  .bg-\[\#3D4549\] {
+    background-color: #3d4549;
+  }
+
   .bg-\[\#191C1E\] {
     background-color: #191c1e;
   }
@@ -685,8 +769,26 @@
     text-align: center;
   }
 
+  .align-middle {
+    vertical-align: middle;
+  }
+
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+
   .text-\[14px\] {
     font-size: 14px;
+  }
+
+  .text-\[15px\] {
+    font-size: 15px;
   }
 
   .text-\[16px\] {
@@ -707,6 +809,11 @@
     font-weight: var(--font-weight-medium);
   }
 
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+
   .text-\(--white\) {
     color: var(--white);
   }
@@ -715,8 +822,20 @@
     color: #6d7274;
   }
 
+  .text-\[\#9FA1A2\] {
+    color: #9fa1a2;
+  }
+
+  .text-\[\#82CC27\] {
+    color: #82cc27;
+  }
+
   .text-\[\#888888\] {
     color: #888;
+  }
+
+  .text-\[\#A7AAAB\] {
+    color: #a7aaab;
   }
 
   .text-\[\#F7F9FA\] {
@@ -734,6 +853,15 @@
 
   .italic {
     font-style: italic;
+  }
+
+  .line-through {
+    text-decoration-line: line-through;
+  }
+
+  .decoration-red-500 {
+    -webkit-text-decoration-color: var(--color-red-500);
+    text-decoration-color: var(--color-red-500);
   }
 
   .antialiased {
