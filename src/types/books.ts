@@ -5,9 +5,14 @@ export interface Books {
     image: string;
     price: number;
     newPrice: number;
+    author:author;
     authorId: number;
     categoryId: number;
     languageId: number;
     difficultyId: number;
     rating: number;
+}
+
+interface author{
+    fullName:string
 }

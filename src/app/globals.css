@@ -20,8 +20,3 @@ body {
     color: var(--white);
     font-family: Poppins, Helvetica, sans-serif;
 }
-
-/* .header {
-    @apply flex shrink-0 justify-between items-center h-19 bg-(--dark) mt-5 mx-2;
-    @apply rounded-2xl p-5 border border-(--stroke) min-w-fit;
-} */

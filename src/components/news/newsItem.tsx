@@ -13,8 +13,8 @@ export default function NewsItem({news}: Props) {
                 <Image src={news.image} alt={news.title} width={302} height={113} 
                 className="w-75.5 h-28.25 rounded-t-sm object-cover object-[0_-10px] overflow-hidden "/>
                 <p className="text-[#F7F9FA]/40 mt-1.75">{news.date}</p>
-                <h3 className="text-[#F7F9FA] text-[14px] cursor-pointer hover:text-[#1C92E0] transition">{news.title}</h3>
-                <h3 className="text-[#888888] text-[14px]">{news.content}</h3>
+                <h3 className="text-[#F7F9FA] text-[14px] cursor-pointer hover:text-[#1C92E0] transition line-clamp-2">{news.title}</h3>
+                <h3 className="text-[#888888] text-[14px] line-clamp-2">{news.content}</h3>
             </article>
         </Link>    
     )

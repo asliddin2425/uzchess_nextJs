@@ -12,7 +12,9 @@ export async function getNews(): Promise<News[]> {
       return [];
     }
     const data = await res.json();
-    data.forEach((x: any) => x.date = Date.parse(x.date));
+    data.forEach((x: { date: string; image: string }) => {
+            x.date = new Date(x.date).toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' });
+        });
     return data;
 
   } catch {
@@ -21,15 +23,6 @@ export async function getNews(): Promise<News[]> {
 
 }
 
-// export default async function getAllNews (): Promise<News[]> {
-//     let res = await  fetch("http://localhost:3000/public/news", {
-//         cache: "force-cache",
-//         next: {revalidate: 60},
-//     })
-
-//     return res.json();
-
-// }
 export async function getOneNews(id: number): Promise<News> {
   const res = await fetch(`http://localhost:3000/public/news/${id}`, {
     cache: 'force-cache',
